@@ -73,6 +73,7 @@
 .sd-foot { padding: 12px 14px; display: flex; flex-direction: column; gap: 10px; }
 .sd-when { color: var(--muted); font-size: 12px; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
 .sd-when b { color: var(--fg); font-weight: 600; }
+.sd-nudges { display: flex; gap: 6px; align-items: center; }
 .sd-nudge { border: 1px solid var(--line); background: none; color: var(--muted); border-radius: 4px; padding: 1px 6px; font-size: 11px; cursor: pointer; }
 .sd-nudge:hover { color: var(--fg); border-color: var(--accent); }
 

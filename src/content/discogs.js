@@ -106,7 +106,16 @@
     const heading = document.querySelector('h1');
     if (heading?.parentElement) {
       btn.classList.add('sd-inline');
-      heading.insertAdjacentElement('afterend', btn);
+      // The release header is a grid, with the <h1> in the wide column. Inserting next to
+      // the heading would make the button the following grid item, landing it in the narrow
+      // cover-art column where the label is squeezed. Step out to the container instead.
+      const parent = heading.parentElement;
+      const { display } = getComputedStyle(parent);
+      const laidOut = display.includes('grid') || display.includes('flex');
+      // Never step out as far as <body>: inserting after it would put the button outside
+      // the document body.
+      const anchor = laidOut && parent !== document.body ? parent : heading;
+      anchor.insertAdjacentElement('afterend', btn);
     } else {
       btn.classList.add('sd-floating');
       document.body.append(btn);

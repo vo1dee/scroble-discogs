@@ -82,7 +82,7 @@ logged to the extension console (`about:debugging` → Inspect). Worth doing onc
 
 | Setting | Default | Notes |
 |---|---|---|
-| Discogs token | empty | Optional. Needed for a **private** collection; also raises the rate limit from 25 to 60 requests a minute. From <https://www.discogs.com/settings/developers> |
+| Discogs token | empty | Optional, but worth setting: without one Discogs returns **no cover art with search results**, so the Search tab shows blank thumbnails. Also needed for a **private** collection, and raises the rate limit from 25 to 60 requests a minute. From <https://www.discogs.com/settings/developers> |
 | Discogs username | empty | Needed to browse your collection without a token |
 | Fallback track length | 240s | Used only when a release lists *no* durations at all |
 | Multi-part works | on | Scrobble movements of a suite or symphony separately |

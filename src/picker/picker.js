@@ -149,7 +149,12 @@ export async function renderPicker(container, { type = 'release', id, onClose } 
     class: 'sd-nudge', text: 'now', title: 'Finished just now',
     onclick: () => { endedAt = Math.floor(Date.now() / 1000); refresh(); },
   });
-  const when = el('div', { class: 'sd-when' }, [whenText, ...nudges, resetNudge]);
+  // The nudges are grouped so they wrap to a second line together. Loose in `.sd-when` they
+  // break one at a time, stranding a single button on its own row at the overlay's width.
+  const when = el('div', { class: 'sd-when' }, [
+    whenText,
+    el('span', { class: 'sd-nudges' }, [...nudges, resetNudge]),
+  ]);
 
   const submit = el('button', { class: 'sd-submit', text: 'Scrobble' });
   const status = el('div', { class: 'sd-status', 'data-kind': 'warn' });

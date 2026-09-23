@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Scroble Discogs</title>
+  <link rel="stylesheet" href="../picker/picker.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body class="sd">
+  <div id="app">
+    <nav class="sd-tabs" id="tabs">
+      <button class="sd-tab" data-tab="search" aria-selected="true">Search</button>
+      <button class="sd-tab" data-tab="collection">Collection</button>
+      <button class="sd-tab" data-tab="paste">Paste</button>
+      <button class="sd-tab" data-tab="recent">Recent</button>
+      <button class="sd-tab sd-tab-icon" id="settings" title="Settings">⚙</button>
+    </nav>
+
+    <div id="notice" hidden></div>
+
+    <section class="sd-pane" data-pane="search">
+      <form id="search-form" class="sd-form">
+        <input id="search-input" type="search" placeholder="Artist or album…" autocomplete="off">
+        <button type="submit">Find</button>
+      </form>
+      <div id="search-results" class="sd-results"></div>
+    </section>
+
+    <section class="sd-pane" data-pane="collection" hidden>
+      <div id="collection-results" class="sd-results"></div>
+    </section>
+
+    <section class="sd-pane" data-pane="paste" hidden>
+      <form id="paste-form" class="sd-form">
+        <input id="paste-input" type="text" placeholder="Discogs URL, [r249504], or 249504" autocomplete="off">
+        <button type="submit">Open</button>
+      </form>
+      <p class="sd-hint">Paste a release URL from Discogs, a release id, or a <code>[r123]</code> marker.</p>
+    </section>
+
+    <section class="sd-pane" data-pane="recent" hidden>
+      <div id="recent-results" class="sd-results"></div>
+    </section>
+  </div>
+
+  <div id="picker" hidden>
+    <button class="sd-back" id="back">← Back</button>
+    <div id="picker-root" class="sd"></div>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

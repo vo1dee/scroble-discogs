@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Scroble Discogs — Settings</title>
+  <link rel="stylesheet" href="../picker/picker.css">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body class="sd">
+<main>
+  <h1>Scroble Discogs</h1>
+
+  <section>
+    <h2>1. Last.fm API credentials</h2>
+    <p class="hint">
+      Create your own key at
+      <a href="https://www.last.fm/api/account/create" target="_blank" rel="noreferrer">last.fm/api/account/create</a>.
+      Any name and description will do; leave the callback URL blank.
+    </p>
+    <label>API key<input id="apiKey" type="text" autocomplete="off" spellcheck="false"></label>
+    <label>Shared secret<input id="secret" type="password" autocomplete="off" spellcheck="false"></label>
+    <button id="saveKeys" class="primary">Save credentials</button>
+    <p id="keysStatus" class="status" hidden></p>
+  </section>
+
+  <section>
+    <h2>2. Connect your account</h2>
+    <div id="connected" hidden>
+      <p class="status ok">Connected as <b id="userName"></b>.</p>
+      <button id="disconnect">Disconnect</button>
+    </div>
+    <div id="disconnected">
+      <p class="hint">Opens Last.fm in a new tab. Click <b>Yes, allow access</b>, then come back and finish.</p>
+      <button id="connect" class="primary">Connect Last.fm</button>
+      <button id="finish" hidden>I've allowed access — finish</button>
+      <p id="authStatus" class="status" hidden></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Discogs <span class="optional">optional</span></h2>
+    <p class="hint">
+      Release pages and search work without this. A token is only needed to browse a
+      <b>private</b> collection, and it raises the rate limit from 25 to 60 requests a minute.
+      Create one at
+      <a href="https://www.discogs.com/settings/developers" target="_blank" rel="noreferrer">discogs.com/settings/developers</a>.
+    </p>
+    <label>Personal access token<input id="discogsToken" type="password" autocomplete="off" spellcheck="false"></label>
+    <label>Username<input id="discogsUser" type="text" autocomplete="off" spellcheck="false" placeholder="needed for collection browsing without a token"></label>
+  </section>
+
+  <section>
+    <h2>Scrobbling</h2>
+    <label class="row">
+      Fallback track length
+      <input id="fallbackDuration" type="number" min="30" max="1800" step="5">
+      <span class="unit">seconds</span>
+    </label>
+    <p class="hint">
+      Used only when a release lists no durations at all. When a release has some, the average
+      of those is used instead. This shifts clock times only — never play counts.
+    </p>
+
+    <label class="check"><input id="expandSubTracks" type="checkbox"> Scrobble movements of multi-part works separately</label>
+    <p class="hint">Off means a suite or symphony is scrobbled as a single track.</p>
+
+    <label class="check"><input id="useAnv" type="checkbox"> Use Discogs' per-release artist name variations</label>
+    <p class="hint">Off (recommended) uses each artist's canonical name, which matches Last.fm more reliably.</p>
+
+    <label class="check"><input id="dryRun" type="checkbox"> Dry run — prepare and log scrobbles without sending them</label>
+    <p class="hint">
+      Useful for checking a release before it hits your profile. Last.fm has no delete-scrobble
+      API, so a mistake has to be removed by hand from your library.
+    </p>
+  </section>
+
+  <p id="saved" class="status ok" hidden>Saved.</p>
+</main>
+<script type="module" src="options.js"></script>
+</body>
+</html>

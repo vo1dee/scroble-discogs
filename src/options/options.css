@@ -1,0 +1,29 @@
+body { margin: 0; background: var(--bg); }
+main { max-width: 620px; margin: 0 auto; padding: 28px 20px 60px; }
+h1 { font-size: 20px; margin: 0 0 24px; }
+h2 { font-size: 14px; margin: 0 0 8px; }
+section { border: 1px solid var(--line); border-radius: 8px; padding: 16px; margin-bottom: 16px; }
+.optional { color: var(--muted); font-weight: 400; font-size: 12px; }
+.hint { color: var(--muted); font-size: 12px; margin: 0 0 12px; line-height: 1.5; }
+.hint a, main a { color: var(--accent); }
+label { display: block; margin-bottom: 10px; font-size: 12px; color: var(--muted); }
+label input[type="text"], label input[type="password"], label input[type="number"] {
+  display: block; width: 100%; margin-top: 4px; padding: 7px 9px;
+  font: inherit; font-size: 13px; color: var(--fg); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 6px;
+}
+label input:focus { outline: none; border-color: var(--accent); }
+label.row { display: flex; align-items: center; gap: 8px; }
+label.row input { width: 90px; margin-top: 0; }
+.unit { color: var(--muted); }
+label.check { display: flex; gap: 8px; align-items: flex-start; color: var(--fg); font-size: 13px; margin-bottom: 4px; }
+label.check input { margin: 2px 0 0; }
+button {
+  font: inherit; font-size: 13px; padding: 7px 13px; border-radius: 6px; cursor: pointer;
+  border: 1px solid var(--line); background: var(--chip); color: var(--fg);
+}
+button.primary { background: var(--accent); color: var(--accent-fg); border-color: transparent; font-weight: 600; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+.status { font-size: 12px; margin: 10px 0 0; padding: 8px 10px; border-radius: 6px; background: var(--chip); }
+.status.ok { background: var(--ok-bg); color: var(--ok-fg); }
+.status.err { background: var(--err-bg); color: var(--err-fg); }

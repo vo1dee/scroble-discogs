@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# web-ext output: built and signed packages
+web-ext-artifacts/
+*.xpi
+*.zip
+
+# web-ext scratch profiles
+.web-ext-profile/
+.web-ext-*.json
+
+# Local AMO / API credentials — never commit these
+.env
+.env.*
+!.env.example
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# macOS
+.DS_Store

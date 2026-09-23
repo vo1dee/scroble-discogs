@@ -1,0 +1,45 @@
+body { width: 400px; margin: 0; background: var(--bg); }
+
+.sd-tabs { display: flex; border-bottom: 1px solid var(--line); background: var(--bg); }
+.sd-tab {
+  flex: 1; border: none; background: none; color: var(--muted);
+  padding: 10px 4px; font: inherit; font-size: 12px; cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+.sd-tab[aria-selected="true"] { color: var(--fg); border-bottom-color: var(--accent); font-weight: 600; }
+.sd-tab-icon { flex: 0 0 34px; font-size: 14px; }
+
+.sd-form { display: flex; gap: 6px; padding: 12px 14px 8px; }
+.sd-form input {
+  flex: 1; min-width: 0; padding: 7px 9px; font: inherit; font-size: 13px;
+  border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--fg);
+}
+.sd-form input:focus { outline: none; border-color: var(--accent); }
+.sd-form button {
+  border: none; background: var(--accent); color: var(--accent-fg);
+  border-radius: 6px; padding: 7px 12px; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
+}
+
+.sd-hint { color: var(--muted); font-size: 12px; margin: 0; padding: 0 14px 14px; }
+.sd-hint code { background: var(--chip); padding: 1px 4px; border-radius: 3px; }
+
+.sd-results { max-height: 420px; overflow-y: auto; }
+.sd-result {
+  display: flex; gap: 10px; align-items: center; width: 100%; text-align: left;
+  padding: 8px 14px; border: none; border-bottom: 1px solid var(--line);
+  background: none; color: var(--fg); font: inherit; cursor: pointer;
+}
+.sd-result:hover { background: var(--chip); }
+.sd-result img, .sd-result .sd-ph { width: 40px; height: 40px; border-radius: 3px; object-fit: cover; background: var(--chip); flex: none; }
+.sd-result-body { min-width: 0; flex: 1; }
+.sd-result-title { display: block; overflow-wrap: anywhere; font-size: 13px; }
+.sd-result-meta { display: block; color: var(--muted); font-size: 11px; margin-top: 1px; }
+
+.sd-back {
+  display: block; width: 100%; text-align: left; border: none; border-bottom: 1px solid var(--line);
+  background: none; color: var(--muted); font: inherit; font-size: 12px; padding: 8px 14px; cursor: pointer;
+}
+.sd-back:hover { color: var(--fg); }
+
+#notice { padding: 10px 14px; font-size: 12px; background: var(--warn-bg); color: var(--warn-fg); }
+#notice a { color: inherit; font-weight: 600; }

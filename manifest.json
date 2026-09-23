@@ -1,0 +1,76 @@
+{
+  "manifest_version": 3,
+  "name": "Scroble Discogs",
+  "version": "0.1.0",
+  "description": "Scrobble vinyl to Last.fm from Discogs release pages, one click per side.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "scroble-discogs@vo1dee",
+      "strict_min_version": "142.0",
+      "data_collection_permissions": {
+        "required": [
+          "authenticationInfo",
+          "browsingActivity"
+        ]
+      }
+    }
+  },
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://api.discogs.com/*",
+    "https://ws.audioscrobbler.com/*",
+    "https://*.discogs.com/*"
+  ],
+  "background": {
+    "scripts": [
+      "src/background.js"
+    ],
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_title": "Scroble Discogs",
+    "default_icon": {
+      "16": "icons/16.png",
+      "32": "icons/32.png",
+      "48": "icons/48.png",
+      "128": "icons/128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "options_ui": {
+    "page": "src/options/options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.discogs.com/*"
+      ],
+      "js": [
+        "src/content/discogs.js"
+      ],
+      "css": [
+        "src/content/discogs.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/picker/picker.html"
+      ],
+      "matches": [
+        "*://*.discogs.com/*"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "scroble-discogs",
+  "version": "0.1.0",
+  "description": "Firefox extension that scrobbles vinyl to Last.fm using Discogs tracklists.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/tracklist.test.mjs",
+    "lint": "web-ext lint",
+    "start": "web-ext run",
+    "build": "web-ext build",
+    "sign": "web-ext sign --channel=unlisted"
+  },
+  "devDependencies": {
+    "web-ext": "^10.7.0"
+  }
+}

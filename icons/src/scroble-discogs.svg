@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <radialGradient id="disc2" cx="36%" cy="30%" r="82%">
+      <stop offset="0%" stop-color="#d94a52"/>
+      <stop offset="42%" stop-color="#b5232b"/>
+      <stop offset="100%" stop-color="#7d151b"/>
+    </radialGradient>
+    <linearGradient id="sheen2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity=".3"/>
+      <stop offset="38%" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="66%" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity=".12"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="62" fill="url(#disc2)"/>
+  <g fill="none" stroke="#3d0c10" stroke-opacity=".38" stroke-width="1.6">
+    <circle cx="64" cy="64" r="56"/><circle cx="64" cy="64" r="51"/>
+    <circle cx="64" cy="64" r="46"/><circle cx="64" cy="64" r="41"/>
+    <circle cx="64" cy="64" r="36"/><circle cx="64" cy="64" r="31"/>
+  </g>
+  <circle cx="64" cy="64" r="23" fill="#f4efe6"/>
+  <circle cx="64" cy="64" r="23" fill="none" stroke="#000" stroke-opacity=".22" stroke-width="1.2"/>
+  <circle cx="64" cy="64" r="4.6" fill="#7d151b"/>
+  <circle cx="64" cy="64" r="62" fill="url(#sheen2)"/>
+</svg>

@@ -9,6 +9,7 @@ export default {
     'package-lock.json',
     'web-ext-config.mjs',
     'docs',
+    'icons/src',
     '*.md',
   ],
   build: {

@@ -60,6 +60,16 @@ WHAT GETS TRANSMITTED
 Your Last.fm credentials go to Last.fm. The releases you open go to Discogs, and what you played goes to Last.fm. Nothing goes anywhere else. There is no server, no analytics, and no data of any kind reaches the author. The source is unminified and readable at github.com/vo1dee/scroble-discogs.
 ```
 
+## Add-on icon
+
+Upload [`icons/128.png`](../icons/128.png). AMO resizes anything larger to 128x128, so 128 is
+the useful maximum; `icons/64.png` and `icons/32.png` exist if the form asks for them
+separately.
+
+The vector source is [`icons/src/scroble-discogs.svg`](../icons/src/scroble-discogs.svg) —
+regenerate the PNGs from it rather than resampling a PNG. It is excluded from the packaged
+`.xpi` by `web-ext-config.mjs`.
+
 ## Categories
 
 Pick from AMO's fixed list; up to two.

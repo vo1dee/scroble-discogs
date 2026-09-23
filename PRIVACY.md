@@ -59,4 +59,5 @@ Last.fm library and must be deleted there — the API cannot remove them.
 
 ## Contact
 
-Questions or concerns: open an issue on the project's repository.
+Questions or concerns: open an issue at
+<https://github.com/vo1dee/scroble-discogs/issues>.

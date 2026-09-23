@@ -150,3 +150,7 @@ page and nothing more.
 ## Publishing
 
 Steps for submitting to addons.mozilla.org are in [PUBLISHING.md](PUBLISHING.md).
+
+## License
+
+[MIT](LICENSE).

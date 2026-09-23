@@ -35,8 +35,9 @@ Check `manifest.json`:
   `browsingActivity`. These drive Firefox's install prompt and the reviewer's expectations —
   they must match what the code actually does, and what [PRIVACY.md](PRIVACY.md) says.
 
-The built `.zip` contains only `manifest.json`, `src/` and `icons/` — `web-ext-config.mjs`
-keeps tests, docs and tooling out of it. Check with `unzip -l web-ext-artifacts/*.zip`.
+The built `.zip` contains only `manifest.json`, `src/`, `icons/` and `LICENSE` —
+`web-ext-config.mjs` keeps tests, docs and tooling out of it. Check with
+`unzip -l web-ext-artifacts/*.zip`.
 
 ---
 
@@ -63,7 +64,7 @@ Go to **<https://addons.mozilla.org/developers/addon/submit/>**.
 
 ### b. Upload
 
-Upload `web-ext-artifacts/scroble_discogs-0.1.0.zip`. The validator runs immediately; since
+Upload `web-ext-artifacts/scroble_discogs-1.0.0.zip`. The validator runs immediately; since
 `npm run lint` was clean, it should pass.
 
 Then it asks **"Do you need to submit source code?"** → **No**. Source code is only required
@@ -82,8 +83,8 @@ unless you've actually tested it there.
 | **Summary** | 250 characters, shown in search results. The manifest description works: *Scrobble vinyl to Last.fm from Discogs release pages, one click per side.* |
 | **Description** | The long text on the listing page. Adapt the top of [README.md](README.md) — what it does, the four popup tabs, the dry-run safety note. Plain language; AMO reviewers read this |
 | **Categories** | Up to two. *Music* fits |
-| **Support email / website** | Required. A repository issues URL is fine for the website |
-| **License** | Pick one. Needed for the listing; the repo has no `LICENSE` file yet, so add one that matches |
+| **Support email / website** | Required. Use <https://github.com/vo1dee/scroble-discogs/issues> as the website and leave the email blank, or give both |
+| **License** | Select **MIT** — it matches [LICENSE](LICENSE) in the repo |
 | **Privacy policy** | **Required here** — the extension declares data collection. Paste the contents of [PRIVACY.md](PRIVACY.md) |
 | **Screenshots** | Optional but worth it: the tracklist picker over a release page, and the popup's Search tab |
 

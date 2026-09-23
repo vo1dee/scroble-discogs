@@ -82,7 +82,7 @@ unless you've actually tested it there.
 | **Add-on URL** | The `addons.mozilla.org/addon/<slug>` slug. Permanent — choose carefully |
 | **Summary** | 250 characters, shown in search results. The manifest description works: *Scrobble vinyl to Last.fm from Discogs release pages, one click per side.* |
 | **Description** | The long text on the listing page. Adapt the top of [README.md](README.md) — what it does, the four popup tabs, the dry-run safety note. Plain language; AMO reviewers read this |
-| **Categories** | Up to two. *Music* fits |
+| **Categories** | Up to two, from AMO's fixed list. **Photos, Music & Videos** is the fit (there is no plain "Music" category) |
 | **Support email / website** | Required. Use <https://github.com/vo1dee/scroble-discogs/issues> as the website and leave the email blank, or give both |
 | **License** | Select **MIT** — it matches [LICENSE](LICENSE) in the repo |
 | **Privacy policy** | **Required here** — the extension declares data collection. Paste the contents of [PRIVACY.md](PRIVACY.md) |

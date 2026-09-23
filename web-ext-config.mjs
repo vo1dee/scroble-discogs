@@ -8,6 +8,7 @@ export default {
     'package.json',
     'package-lock.json',
     'web-ext-config.mjs',
+    'docs',
     '*.md',
   ],
   build: {
